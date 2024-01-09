@@ -52,7 +52,8 @@ void Convert_To_Tex(char* Input_String)
 
 }
 
-int main() {
+int main()
+{
     BYTE Input_String[] = "36 33 33 37 33 34 36 33 3a 35 33 3b 36 33 43 37 33 45 36 33 47 35 33 49 34 33 4a 35 33 4c 36 33 55";
     Convert_To_Tex(Input_String);
     return 0;
