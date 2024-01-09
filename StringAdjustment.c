@@ -24,7 +24,7 @@ void Convert_To_Tex(char* Input_String)
 
     // °´ÕÕ¿Õ¸ñÇĞ¸îÔªËØ
     token = strtok(Input_String, " ");
-    while (token != NULL && Len < MAX_ELEMENTS)
+    while ((token != NULL) && (Len < MAX_ELEMENTS))
     {
         Tem_Elements[Len++] = token;
         token = strtok(NULL, " ");
