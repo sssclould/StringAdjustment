@@ -54,10 +54,9 @@ int main()
 {
     //BYTE Input_String[] = "33 33 34 34 57";
 #define lines 3
-#define rows 120
 
     BYTE i = 0;
-    BYTE Input_String[lines][rows] =
+    BYTE Input_String[lines][MAX_ELEMENTS] =
     {
         "33 33 34 34 57",
         "34 33 34 34 57 34",
