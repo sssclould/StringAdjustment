@@ -13,10 +13,10 @@
 
 #define MAX_ELEMENTS 120
 
-void Convert_To_Tex(char* Input_String)
+void Convert_To_Tex(BYTE* Input_String)
 {
     BYTE i = 0;
-    BYTE* token;
+    BYTE* token = NULL;
     BYTE* Tem_Elements[MAX_ELEMENTS] = { 0 };//´æ´¢ÇÐ¸îºóµÄÔªËØ
     BYTE Elements[MAX_ELEMENTS] = { 0 };
 
@@ -46,15 +46,28 @@ void Convert_To_Tex(char* Input_String)
             printf(",");
         }
     }
-    printf("\n");
-
-
+    printf("(0x%02x)\n",Len);
 
 }
 
 int main()
 {
-    BYTE Input_String[] = "36 33 33 37 33 34 36 33 3a 35 33 3b 36 33 43 37 33 45 36 33 47 35 33 49 34 33 4a 35 33 4c 36 33 55";
-    Convert_To_Tex(Input_String);
+    //BYTE Input_String[] = "33 33 34 34 57";
+#define lines 3
+#define rows 120
+
+    BYTE i = 0;
+    BYTE Input_String[lines][rows] =
+    {
+        "33 33 34 34 57",
+        "34 33 34 34 57 34",
+        "35 33 34 34 57 36 38",
+    };
+    for (i = 0;i < lines;i++)
+    {
+        Convert_To_Tex(Input_String[i]);
+
+    }
+        
     return 0;
 }
